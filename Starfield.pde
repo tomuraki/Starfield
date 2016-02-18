@@ -61,7 +61,7 @@ class NormalParticle implements Particle
 	int Color;	
 	NormalParticle() 
 	{
-		Color=(int)(Math.random()*255);
+		Color=color((int)(Math.random()*255),(int)(Math.random()*255),(int)(Math.random()*255));
 		myX=200;
 		myY=200;
 		Angle=(int)(Math.random()*360)+1;
@@ -76,7 +76,7 @@ class NormalParticle implements Particle
     public void show()
     {
     	noStroke();
-    	fill(Color,Color,Color);
+    	fill(Color);
     	ellipse((float)myX,(float)myY,(float)10,(float)10);
     	stroke(0);
     }
